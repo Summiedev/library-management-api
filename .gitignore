@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# MongoDB data (if you're using a local database directory)
+data/
+
+# Temporary files
+*.tmp
+
+# IDE or editor folders (VS Code, IntelliJ, etc.)
+.vscode/
+.idea/
+
+# OS-specific files (macOS, Windows)
+.DS_Store
+Thumbs.db
