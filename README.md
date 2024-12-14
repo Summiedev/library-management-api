@@ -64,6 +64,13 @@ To run the application locally, follow these steps:
    http://localhost:3000/api-docs
    ```
 
+3. **Run MongoDB Locally**
+
+   - Open MongoDB Compass.
+   - Connect to `mongodb://localhost:27017`.
+   - Create a new database named `library`.
+   - Add a collection named `books` (the app will populate it when you add books).
+
 ## API Endpoints
 
 ### `POST /api/books`
@@ -202,9 +209,9 @@ PATCH /api/books/return/Americanah
 
 ## NOTES
 
-- Ensure MongoDB is running: You need to have a MongoDB server running locally or use a cloud-based solution (like MongoDB Atlas).
+- Ensure MongoDB is running: You need to have a MongoDB server running locally .
 - Testing: You can test the API using tools like Postman or Insomnia. Make sure to set the appropriate request headers, e.g., Content-Type: application/json for POST and PATCH requests.
-- Used for `borrow` and `return` endpoints to update specific fields of an existing resource without replacing the entire object. This is more semantically correct than using `POST`, which is typically for creating new resources.
+- `PATCH` : Used for `borrow` and `return` endpoints to update specific fields of an existing resource without replacing the entire object. This is more semantically correct than using `POST`, which is typically for creating new resources.
 
 ---
 
