@@ -6,38 +6,44 @@ const { addBook, borrowBook, returnBook, getAllBooks } = require('../controllers
  * @swagger
  * /api/books:
  *   post:
- *     description: Add a new book to the library
- *     requestBody:
- *       required: true
- *       content:
- *         application/json:
- *           schema:
- *             type: object
- *             required:
- *               - title
- *               - author
- *               - copiesAvailable
- *             properties:
- *               title:
- *                 type: string
- *                 description: The title of the book
- *                 example: "The Art of Procrastination"
- *               author:
- *                 type: string
- *                 description: The author of the book
- *                 example: "Sumayyah Apatira"
- *               genre:
- *                 type: string
- *                 description: The genre of the book
- *                 example: "Non-Fiction"
- *               bookPages:
- *                 type: integer
- *                 description: The number of pages in the book
- *                 example: 180
- *               copiesAvailable:
- *                 type: integer
- *                 description: The number of copies of the book available in the library
- *                 example: 5
+ *     summary: Add a new book to the library
+ *     description: Adds a new book with title, author, genre, book pages, and available copies.
+ *     parameters:
+ *       - in: body
+ *         name: book
+ *         description: The book to add
+ *         required: true
+ *         schema:
+ *            type: object
+ *            properties:
+ *             title:
+ *               type: string
+ *               description: The title of the book
+ *               example: "Americanah"
+ *               # Marked as required in the body schema
+ *               required: true
+ *             author:
+ *               type: string
+ *               description: The author of the book
+ *               example: "Chimamanda Ngozi Adichie"
+ *               # Marked as required in the body schema
+ *               required: true
+ *             genre:
+ *               type: string
+ *               description: The genre of the book
+ *               example: "Fiction"
+ *               required: false
+ *             bookPages:
+ *               type: integer
+ *               description: The number of pages in the book
+ *               example: 477
+ *               required: false
+ *             copiesAvailable:
+ *               type: integer
+ *               description: The number of copies available in the library
+ *               example: 7
+ *               # Marked as required in the body schema
+ *               required: true
  *     responses:
  *       201:
  *         description: Successfully added the book
