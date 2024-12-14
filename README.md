@@ -14,6 +14,7 @@ This is a simple REST API for a library management system built using Node.js an
   - [GET /api/books](#get-apibooks)
 - [NOTES](#notes)
 - [Technologies Used](#technologies-used)
+- [Live API Documentation](#live-api-documentation)
 - [License](#license)
 
 ## Installation
@@ -223,6 +224,37 @@ PATCH /api/books/return/Americanah
 - **Mongoose**: MongoDB object modeling for Node.js.
 - **Swagger UI**: For API documentation.
 - **dotenv**: For managing environment variables.
+
+## Live API Documentation
+
+The Library Management API is live and hosted on Render. You can access it using the following URL:
+
+    Base URL:
+    https://library-management-api-0wsm.onrender.com
+
+Example Endpoints:
+
+- POST /api/books
+    Endpoint to add a new book to the library:
+
+      POST https://library-management-api-0wsm.onrender.com/api/books/
+
+- PATCH /api/books/borrow/:title
+    Borrow a book by its title:
+
+      PATCH https://library-management-api-0wsm.onrender.com/api/books/borrow/Americanah
+
+- PATCH /api/books/return/:title
+    Return a borrowed book:
+
+      PATCH https://library-management-api-0wsm.onrender.com/api/books/return/Americanah
+
+- GET /api/books
+    Get a list of all books in the library:
+
+      GET https://library-management-api-0wsm.onrender.com/api/books/
+
+You can test the API by sending requests to these endpoints using tools like Postman or Insomnia.
 
 ## License
 
